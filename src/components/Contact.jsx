@@ -1,16 +1,9 @@
-import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import React from "react";
 import { cn } from "../lib/utils";
 
 const Contact = () => {
 
-    const  handleSubmit = (e) => {
-        e.preventDefault()
-
-        setTimeout(() => {
-            
-        }, 1500)
-    }
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
