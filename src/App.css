@@ -1,0 +1,98 @@
+#textblock {
+  background-color: #000000;
+  height: 30vh;
+}
+
+#textblock-container {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+#textblock-title {
+  color: #ffaf1b;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: "Helvetica Neue";
+}
+
+#textblock-content {
+  color: #ffaf1b;
+  font-size: 20px;
+}
+
+#textblock-footer {
+  color: #ffaf1b;
+  font-size: 15px;
+  font-weight: 400;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  margin-bottom: 20px;
+
+}
+
+#textblock-devsense {
+  text-decoration: none;
+  color: #ffaf1b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.animation, .animation_layer {
+	height: 1000px;
+}
+
+.animation {
+  display: block;
+	position: relative;
+	z-index: 10;
+}
+
+.animation_layer {
+  width: 100%;
+  height: 100%;
+  background-position: bottom center;
+  background-size: auto 100%; /* stretch vertically to full height of layer */
+  background-repeat: repeat-x; /* repeat horizontally */
+}
+
+#sky {
+  background-image: url(./clouds/4.png);
+}
+
+#cloud1 {
+  background-image: url(./clouds/5.png);
+}
+
+#cloud2 {
+  background-image: url(./clouds/6.png);
+}
+
+#cloudmix {
+  background-image: url(./clouds/7.png);
+}
+
+#city1 {
+  background-image: url(./clouds/11.png);
+  
+}
+
+#city2 {
+  background-image: url(./clouds/10.png);
+  transform: translateY(50px);
+}
+
+#city3 {
+  background-image: url(./clouds/9.png);
+  transform: translateY(100px);
+}
+
+#city4 {
+  background-image: url(./clouds/8.png);
+  transform: translateY(150px);
+}
+
