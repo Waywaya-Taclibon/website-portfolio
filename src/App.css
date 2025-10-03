@@ -3,6 +3,24 @@
   height: 30vh;
 }
 
+
+:root {
+  --textblock-bg: #ffffff;
+  --textblock-title: #000000;
+  --textblock-content: #333333;
+}
+
+.dark {
+  --textblock-bg: #000000;
+  --textblock-title: #ffffff;
+  --textblock-content: #cccccc;
+}
+
+#textblock {
+  background-color: var(--textblock-bg);
+  height: 30vh;
+}
+
 #textblock-container {
   width: 50%;
   margin: 0 auto;

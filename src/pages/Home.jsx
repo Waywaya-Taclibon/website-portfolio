@@ -12,6 +12,7 @@ import App from "../App";
 import TextBlock from "../components/TextBlock";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -51,6 +52,11 @@ const Home = () => {
         {/* Page 6 */}
         <ParallaxLayer offset={6.2} speed={0.3}>
           <Contact />
+        </ParallaxLayer>
+
+        {/* Page 7 */}
+        <ParallaxLayer offset={7.0} speed={0.3}>
+          <Footer />
         </ParallaxLayer>
       </Parallax>
       <Navbar />
