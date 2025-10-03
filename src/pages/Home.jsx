@@ -54,10 +54,6 @@ const Home = () => {
           <Contact />
         </ParallaxLayer>
 
-        {/* Page 7 */}
-        <ParallaxLayer offset={7.0} speed={0.3}>
-          <Footer />
-        </ParallaxLayer>
       </Parallax>
       <Navbar />
     </div>
