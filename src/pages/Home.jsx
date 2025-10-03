@@ -40,17 +40,17 @@ const Home = () => {
         </ParallaxLayer>
 
         {/* Page 4 */}
-        <ParallaxLayer offset={4} speed={0.3}>
+        <ParallaxLayer offset={3.97} speed={0.3}>
           <Skills />
         </ParallaxLayer>
 
         {/* Page 5 */}
-        <ParallaxLayer offset={5.2} speed={0.3}>
+        <ParallaxLayer offset={5.3} speed={0.3}>
           <Projects />
         </ParallaxLayer>
 
         {/* Page 6 */}
-        <ParallaxLayer offset={6.2} speed={0.3}>
+        <ParallaxLayer offset={6.3} speed={0.3}>
           <Contact />
         </ParallaxLayer>
 

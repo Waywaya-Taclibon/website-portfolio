@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { UserStar, Code, Cog, CogIcon } from "lucide-react";
 import React from "react";
 
 const About = () => {
@@ -16,31 +16,19 @@ const About = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              I’m <strong>Waywaya Taclibon</strong>, a Computer Engineering
-              graduate and aspiring <strong>Software Developer</strong>{" "}
-              passionate about building responsive, user-centered web
-              applications. Skilled in{" "}
-              <strong>React, Firebase, Node.js, and MySQL</strong>, I’ve
-              developed scalable projects like ADUPay (a self-service payment
-              kiosk) and an Inventory Management System. With experience in both
-              frontend and backend, along with proven leadership in academic
-              projects and university organizations, I bring adaptability,
-              collaboration, and a drive for continuous learning to every
-              project.
+              I enjoy turning ideas into functional, user-friendly solutions.
+              From designing intuitive interfaces to building reliable backend
+              systems, I focus on creating applications that make an impact. My
+              journey in Computer Engineering has given me both technical depth
+              and hands-on project leadership, allowing me to work effectively
+              in teams and deliver results under real-world conditions.
             </p>
 
             <p className="text-muted-foreground">
-              I’m <strong>Waywaya Taclibon</strong>, a Computer Engineering
-              graduate and aspiring <strong>Software Developer</strong>{" "}
-              passionate about building responsive, user-centered web
-              applications. Skilled in{" "}
-              <strong>React, Firebase, Node.js, and MySQL</strong>, I’ve
-              developed scalable projects like ADUPay (a self-service payment
-              kiosk) and an Inventory Management System. With experience in both
-              frontend and backend, along with proven leadership in academic
-              projects and university organizations, I bring adaptability,
-              collaboration, and a drive for continuous learning to every
-              project.
+              When I’m not coding, I’m learning new tools, exploring emerging
+              technologies, and finding ways to improve my craft. For me,
+              development isn’t just about writing code it’s about solving
+              problems and continuously growing as a creator.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -67,8 +55,8 @@ const About = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> Web Development</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive website and web applications with modern
-                    frameworks
+                    I build responsive and user-centered web applications using
+                    modern frameworks.
                   </p>
                 </div>
               </div>
@@ -76,13 +64,13 @@ const About = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
+                  <CogIcon className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg"> Software Solutions</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive website and web applications with modern
-                    frameworks
+                    I create scalable systems that solve real-world problems
+                    efficiently.
                   </p>
                 </div>
               </div>
@@ -90,13 +78,13 @@ const About = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
+                  <UserStar className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg"> Team Leadership</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive website and web applications with modern
-                    frameworks
+                    I lead projects and collaborate effectively to deliver
+                    quality results.
                   </p>
                 </div>
               </div>
