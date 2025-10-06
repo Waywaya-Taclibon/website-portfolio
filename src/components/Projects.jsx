@@ -10,7 +10,7 @@ const projects = [
     image: "/Projectimg/ADUPAY.png",
     tags: ["React", "Firebase"],
     demoUrl: "https://adupay-kiosk.vercel.app/login",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Waywaya-Taclibon/admin-dashboard",
   },
 ];
 
