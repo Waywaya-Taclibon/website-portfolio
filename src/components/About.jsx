@@ -37,7 +37,7 @@ const About = () => {
                 Get In Touch
               </a>
               <a
-                href="/Waywaya_Resume.pdf"
+                href={`${process.env.PUBLIC_URL}/Waywaya_Taclibon.pdf`}
                 download="Waywaya_Resume.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
