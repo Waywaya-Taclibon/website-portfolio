@@ -1,4 +1,5 @@
 import { UserStar, Code, Cog, CogIcon } from "lucide-react";
+import Resume from "../assets/Waywaya_Taclibon.pdf";
 import React from "react";
 
 const About = () => {
@@ -37,7 +38,7 @@ const About = () => {
                 Get In Touch
               </a>
               <a
-                href={`${process.env.PUBLIC_URL}/Waywaya_Taclibon.pdf`}
+                href={Resume}
                 download="Waywaya_Resume.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
