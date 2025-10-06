@@ -49,7 +49,7 @@ function City() {
         <div className="animation_layer parallax" id="cloudmix"></div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0.9} speed={1} factor={1.5}>
+      <ParallaxLayer offset={0.9} speed={0.05} factor={1.5}>
         <div className="flex justify-center items-center h-screen">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-center">
             “Turning code into experiences that connect people.”
@@ -57,7 +57,7 @@ function City() {
         </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0.98} speed={1} factor={1.5}>
+      <ParallaxLayer offset={0.98} speed={0.05} factor={1.5}>
         <div className="flex justify-center items-center h-screen">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-right">
             - Sun Tzu

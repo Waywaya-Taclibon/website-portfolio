@@ -62,9 +62,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Gradient transition */}
-      <div className="w-full h-24 bg-gradient-to-b from-transparent to-[var(--background)] relative z-10" />
-
       {/* ✅ Section 2: Regular scroll sections */}
       <main className="relative z-10 bg-[var(--background)]">
         <MySection />
