@@ -3,16 +3,22 @@ import { Sun, Moon } from "lucide-react";
 import { cn } from "../lib/utils";
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      setIsDarkMode(true);
+    // Get stored theme or default to dark
+    const storedTheme = localStorage.getItem("theme") || "dark";
+    const isDark = storedTheme === "dark";
+    
+    setIsDarkMode(isDark);
+    
+    // Apply the classes
+    if (isDark) {
       document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
     } else {
-      setIsDarkMode(false);
+      document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
     }
   }, []);
@@ -28,59 +34,42 @@ const ThemeToggle = () => {
 
   const toggleTheme = () => {
     const newMode = !isDarkMode;
+    
+    setIsDarkMode(newMode);
 
     if (newMode) {
+      // Switching to dark mode
       document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
       localStorage.setItem("theme", "dark");
     } else {
+      // Switching to light mode
+      document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
 
-    setIsDarkMode(newMode);
-
-    // 🔥 Tell other components (like StarBackground) immediately
     window.dispatchEvent(
       new CustomEvent("theme-change", { detail: { isDarkMode: newMode } })
     );
   };
 
   return (
-    <>
-      {/* Desktop Theme Toggle - Fixed position */}
-      <button
-        onClick={toggleTheme}
-        className={cn(
-          "hidden md:block fixed top-5 right-5 z-50 p-2 rounded-full transition-all duration-300",
-          "focus:outline-none",
-          isScrolled ? "bg-background/80 backdrop-blur-md shadow-lg" : ""
-        )}
-        aria-label="Toggle theme"
-      >
-        {isDarkMode ? (
-          <Sun className="h-6 w-6 text-yellow-300" />
-        ) : (
-          <Moon className="h-6 w-6 text-blue-900" />
-        )}
-      </button>
-
-      {/* Mobile Theme Toggle - In navbar area */}
-      <button
-        onClick={toggleTheme}
-        className={cn(
-          "md:hidden fixed top-5 right-16 z-50 p-2 rounded-full transition-all duration-300",
-          "focus:outline-none",
-          isScrolled ? "bg-background/80 backdrop-blur-md shadow-lg" : ""
-        )}
-        aria-label="Toggle theme"
-      >
-        {isDarkMode ? (
-          <Sun className="h-5 w-5 text-yellow-300" />
-        ) : (
-          <Moon className="h-5 w-5 text-blue-900" />
-        )}
-      </button>
-    </>
+    <button
+      onClick={toggleTheme}
+      className={cn(
+        "fixed top-5 right-5 z-50 p-2 rounded-full transition-all duration-300 md:hidden",
+        "focus:outline-none",
+        isScrolled ? "bg-background/80 backdrop-blur-md shadow-lg" : ""
+      )}
+      aria-label="Toggle theme"
+    >
+      {isDarkMode ? (
+        <Sun className="h-6 w-6 text-yellow-300" />
+      ) : (
+        <Moon className="h-6 w-6 text-blue-900" />
+      )}
+    </button>
   );
 };
 

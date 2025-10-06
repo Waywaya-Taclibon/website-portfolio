@@ -37,10 +37,10 @@ const About = () => {
                 Get In Touch
               </a>
               <a
-                href=""
+                href="/Waywaya Resume.pdf"
+                download="Waywaya Resume.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
-                {" "}
                 Download CV
               </a>
             </div>

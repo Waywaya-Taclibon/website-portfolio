@@ -7,7 +7,7 @@ const Footer = () => {
       {" "}
       <p className="text-sm text-muterd-foreground">
         {" "}
-        &copy; {new Date().getFullYear()} Waywaya.co. All rights reserved.
+        &copy; {new Date().getFullYear()} Waywaya Taclibon. All rights reserved.
       </p>
       <a href="#home" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors">
         <ArrowUp size={20}/>

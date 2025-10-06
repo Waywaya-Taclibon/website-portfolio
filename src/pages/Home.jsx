@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from "react";
-import ThemeToggle from "../components/ThemeToggle";
 import StarBackground from "../components/StarBackground";
 import Navbar from "../components/Navbar";
 import MySection from "../components/MySection";
@@ -36,7 +35,6 @@ const Home = () => {
 
   return (
     <div className="min-h-screen relative">
-      <ThemeToggle />
       <StarBackground />
       <Navbar />
 

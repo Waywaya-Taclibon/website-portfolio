@@ -81,7 +81,7 @@ const Projects = () => {
             target="_blank"
             href="https://github.com/Waywaya-Taclibon"
           >
-            Check My GihHub <ArrowRight size={16} />
+            Check My GitHub <ArrowRight size={16} />
           </a>
         </div>
       </div>

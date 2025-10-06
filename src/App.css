@@ -1,8 +1,23 @@
 #textblock {
   height: 30vh;
-  background: linear-gradient(to bottom, #110d27 0%, #110d27 40%, transparent 100%);
+  background: linear-gradient(
+    to bottom,
+    #110d27 0%,
+    #110d27 40%,
+    transparent 100%
+  );
 }
 
+:root.light #textblock,
+html.light #textblock {
+  height: 30vh;
+  background: linear-gradient(
+    to bottom,
+    #fdeae3 0%,
+    #fdeae3 40%,
+    transparent 100%
+  );
+}
 
 .animation,
 .animation_layer {
@@ -19,10 +34,11 @@
   width: 100%;
   height: 100%;
   background-position: bottom center;
-  background-size: auto 100%; /* stretch vertically to full height of layer */
-  background-repeat: repeat-x; /* repeat horizontally */
+  background-size: auto 100%;
+  background-repeat: repeat-x;
 }
 
+/* Dark Mode Images (Default) */
 #sky {
   background-image: url(./clouds/4.png);
 }
@@ -55,5 +71,49 @@
 
 #city4 {
   background-image: url(./clouds/8.png);
+  transform: translateY(150px);
+}
+
+/* Light Mode Images */
+:root.light #sky,
+html.light #sky {
+  background-image: url(./light/a.png);
+}
+
+:root.light #cloud1,
+html.light #cloud1 {
+  background-image: url(./light/d.png);
+}
+
+:root.light #cloud2,
+html.light #cloud2 {
+  background-image: url(./light/c.png);
+}
+
+:root.light #cloudmix,
+html.light #cloudmix {
+  background-image: url(./light/b.png);
+}
+
+:root.light #city1,
+html.light #city1 {
+  background-image: url(./light/h.png);
+}
+
+:root.light #city2,
+html.light #city2 {
+  background-image: url(./light/g.png);
+  transform: translateY(50px);
+}
+
+:root.light #city3,
+html.light #city3 {
+  background-image: url(./light/f.png);
+  transform: translateY(100px);
+}
+
+:root.light #city4,
+html.light #city4 {
+  background-image: url(./light/e.png);
   transform: translateY(150px);
 }

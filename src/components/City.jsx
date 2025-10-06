@@ -15,14 +15,14 @@ function City() {
         <div className="animation_layer parallax" id="cloud1"></div>
       </ParallaxLayer>
 
+      <ParallaxLayer offset={0} speed={0.25} factor={1.75}>
+        <div className="animation_layer parallax" id="cloud2"></div>
+      </ParallaxLayer>
+
       <ParallaxLayer offset={0.3} speed={-0.1} factor={1}>
         <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-center">
           <span className="block opacity-0 animate-fade-in">Welcome!</span>
         </h2>
-      </ParallaxLayer>
-
-      <ParallaxLayer offset={0} speed={0.25} factor={1.75}>
-        <div className="animation_layer parallax" id="cloud2"></div>
       </ParallaxLayer>
 
       {/* Header */}
@@ -52,15 +52,8 @@ function City() {
       <ParallaxLayer offset={0.9} speed={0.05} factor={1.5}>
         <div className="flex justify-center items-center h-screen">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-center">
-            “Turning code into experiences that connect people.”
-          </h2>
-        </div>
-      </ParallaxLayer>
-
-      <ParallaxLayer offset={0.98} speed={0.05} factor={1.5}>
-        <div className="flex justify-center items-center h-screen">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-right">
-            - Sun Tzu
+            “Behind every smooth experience is a developer <br /> who refused to
+            settle for ‘good enough.’”
           </h2>
         </div>
       </ParallaxLayer>
