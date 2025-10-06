@@ -9,7 +9,15 @@ const StarBackground = () => {
   // 1) read initial theme and listen for theme-change events
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
-    setIsDarkMode(storedTheme === "dark");
+    if (storedTheme === "dark") {
+      setIsDarkMode(true);
+    } else if (storedTheme === "light") {
+      setIsDarkMode(false);
+    } else {
+      // default when nothing is stored
+      setIsDarkMode(true); // <- dark mode default
+      localStorage.setItem("theme", "dark"); // optional: store default
+    }
 
     const onThemeChange = (e) => {
       setIsDarkMode(Boolean(e?.detail?.isDarkMode));

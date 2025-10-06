@@ -7,20 +7,18 @@ const ThemeToggle = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    // Get stored theme or default to dark
-    const storedTheme = localStorage.getItem("theme") || "dark";
-    const isDark = storedTheme === "dark";
-    
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    const isDark = storedTheme ? storedTheme === "dark" : prefersDark;
+
     setIsDarkMode(isDark);
-    
-    // Apply the classes
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-      document.documentElement.classList.remove("light");
-    } else {
-      document.documentElement.classList.add("light");
-      document.documentElement.classList.remove("dark");
-    }
+
+    // This part ensures React syncs state without reapplying the class
+    document.documentElement.classList.remove(isDark ? "light" : "dark");
+    document.documentElement.classList.add(isDark ? "dark" : "light");
   }, []);
 
   useEffect(() => {
@@ -34,7 +32,7 @@ const ThemeToggle = () => {
 
   const toggleTheme = () => {
     const newMode = !isDarkMode;
-    
+
     setIsDarkMode(newMode);
 
     if (newMode) {
