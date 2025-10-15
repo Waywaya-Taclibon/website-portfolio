@@ -92,7 +92,7 @@ const StarBackground = () => {
         size: Math.random() * 80 + 50,
         x: Math.random() * 100,
         y: Math.random() * 40,
-        speed: Math.random() * 20 + 20,
+        speed: Math.random() * 55 + 55,
       });
     }
     setClouds(newClouds);
