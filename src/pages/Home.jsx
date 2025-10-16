@@ -9,6 +9,7 @@ import City from "../components/City";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Certifications from "../components/Certifications";
 
 const Home = () => {
   const parallaxRef = useRef();
@@ -66,6 +67,7 @@ const Home = () => {
         <About />
         <Skills />
         <Projects />
+        <Certifications />
         <Contact />
         <Footer />
       </main>
