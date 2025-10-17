@@ -7,6 +7,7 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Certificate", href: "#certifications" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -55,9 +56,9 @@ const Navbar = () => {
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme") || "dark";
     const isDark = storedTheme === "dark";
-    
+
     setIsDarkMode(isDark);
-    
+
     if (isDark) {
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");
@@ -93,8 +94,11 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled
+        "fixed w-full transition-all duration-300",
+        isMenuOpen
+          ? "z-40 bg-background transition-none"
+          : "z-40 transition-all",
+        isScrolled && !isMenuOpen
           ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
           : "py-5"
       )}

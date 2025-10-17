@@ -17,19 +17,22 @@ const About = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              I enjoy turning ideas into functional, user-friendly solutions.
-              From designing intuitive interfaces to building reliable backend
-              systems, I focus on creating applications that make an impact. My
-              journey in Computer Engineering has given me both technical depth
-              and hands-on project leadership, allowing me to work effectively
-              in teams and deliver results under real-world conditions.
+              I take pride in transforming ideas into functional, user-focused
+              digital solutions. From crafting intuitive interfaces to
+              developing reliable backend systems, I’m driven by the goal of
+              creating applications that make a real impact. My background in
+              Computer Engineering has equipped me with both technical expertise
+              and hands-on leadership experience, enabling me to collaborate
+              effectively and deliver results in real-world projects.
             </p>
 
             <p className="text-muted-foreground">
-              When I’m not coding, I’m learning new tools, exploring emerging
-              technologies, and finding ways to improve my craft. For me,
-              development isn’t just about writing code it’s about solving
-              problems and continuously growing as a creator.
+              I’m deeply motivated by the process of learning and refining
+              whether it’s experimenting with new frameworks, improving code
+              efficiency, or understanding how design affects user behavior. I
+              see development as both a craft and a continuous journey one
+              that challenges me to think critically, stay adaptable, and build
+              with purpose.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">

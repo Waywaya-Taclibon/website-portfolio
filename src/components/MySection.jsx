@@ -22,15 +22,12 @@ const MySection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I’m <strong>Waywaya Taclibon</strong>, a Computer Engineering
-            graduate and aspiring <strong>Software Developer</strong> passionate
-            about building responsive, user-centered web applications. Skilled
-            in <strong>React, Firebase, Node.js, and MySQL</strong>, I’ve
-            developed scalable projects like ADUPay (a self-service payment
-            kiosk) and an Inventory Management System. With experience in both
-            frontend and backend, along with proven leadership in academic
-            projects and university organizations, I bring adaptability,
-            collaboration, and a drive for continuous learning to every project.
+            a Computer Engineering graduate and aspiring <strong>Software Developer </strong>
+            passionate about building responsive, user-centered web
+            applications. Skilled in<strong> React, Firebase, Node.js, and MySQL</strong>, I’ve
+            developed scalable projects like <strong>ADUPay </strong>and an <strong>Inventory Management
+            System</strong>, driven by curiosity, collaboration, and a constant desire to
+            learn and improve.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
@@ -42,7 +39,7 @@ const MySection = () => {
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-muted-foreground mb-2"> Scroll  </span>
+        <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
         <ArrowDown className="h-5 w-5 text-primary" />
       </div>
     </section>
