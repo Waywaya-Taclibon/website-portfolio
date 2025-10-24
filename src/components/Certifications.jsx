@@ -13,6 +13,17 @@ const certifications = [
     badgeUrl:
       "https://catalog-education.oracle.com/ords/certview/sharebadge?id=59D47EC2B3E6D5066CADA95814C3D71CC308724E9381C9DABC9F249DE53EE6B5",
   },
+  {
+    id: 2,
+    title:
+      "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
+    issuer: "Oracle",
+    date: "October 2025",
+    image: "/Certimg/OCI2.png",
+    verifyUrl: "/Certimg/eCertificate2.pdf",
+    badgeUrl:
+      "https://catalog-education.oracle.com/pls/certview/sharebadge?id=D55293D169A0C65871053108BE29F676B734953A7E19022C3C5B043ABA3B9585",
+  },
 ];
 
 const Certifications = () => {
