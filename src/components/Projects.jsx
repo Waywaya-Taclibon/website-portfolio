@@ -12,6 +12,17 @@ const projects = [
     demoUrl: "https://adupay-kiosk.vercel.app/login",
     githubUrl: "https://github.com/Waywaya-Taclibon/admin-dashboard",
   },
+
+  {
+    id: 2,
+    title: "DopaWink",
+    description:
+      "A real-time dating web app built with React, Node.js, and MongoDB that lets users match, chat, and receive live notifications seamlessly.",
+    image: "/Projectimg/DopaWink.png",
+    tags: ["React", "Node.js", "MongoDB", "Clerk"],
+    demoUrl: "https://dopawink.vercel.app/",
+    githubUrl: "https://github.com/Waywaya-Taclibon/dating-webapp",
+  },
 ];
 
 const Projects = () => {
