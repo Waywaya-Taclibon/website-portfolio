@@ -22,12 +22,13 @@ const MySection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            a Computer Engineering graduate and aspiring <strong>Software Developer </strong>
-            passionate about building responsive, user-centered web
-            applications. Skilled in<strong> React, Firebase, Node.js, and MySQL</strong>, I’ve
-            developed scalable projects like <strong>ADUPay </strong>and an <strong>Inventory Management
-            System</strong>, driven by curiosity, collaboration, and a constant desire to
-            learn and improve.
+            A Junior Software Engineer passionate about
+            building reliable, user-centered web applications and practical
+            software solutions. Experienced with <strong>Python, Django, React,
+            JavaScript, Firebase, and MySQL</strong>, I’ve developed enterprise platforms
+            and projects such as <strong>ADUPay</strong> and an <strong>Inventory Management System</strong>.
+            Driven by curiosity, collaboration, and a constant desire to learn
+            and improve.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
