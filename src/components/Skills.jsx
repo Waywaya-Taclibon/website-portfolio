@@ -1,31 +1,33 @@
 import React, { useState } from "react";
 import { cn } from "../lib/utils";
 
+const HTMLCSS = <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 80, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 85, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
+  { name: "HTML/CSS", icon: "devicon-html5-plain coloured", category: "frontend" },
+  { name: "JavaScript", icon: "devicon-javascript-plain colored", category: "frontend" },
+  { name: "React", icon: "devicon-react-original colored", category: "frontend" },
+  { name: "TypeScript", icon: "devicon-typescript-plain colored", category: "frontend" },
+  { name: "Tailwind CSS", icon: "devicon-tailwindcss-original colored", category: "frontend" },
+  { name: "Next.js", icon: "devicon-nextjs-plain", category: "frontend" },
 
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 80, category: "backend" },
-  { name: "Firebase", level: 90, category: "backend" },
-  { name: "MySQL", level: 80, category: "backend" },
-  { name: "Python", level: 80, category: "backend" },
-  { name: "C++", level: 80, category: "backend" },
-  { name: "C#", level: 80, category: "backend" },
-  { name: "OpenCV", level: 80, category: "backend" },
+  { name: "Node.js", icon: "devicon-nodejs-plain colored", category: "backend" },
+  { name: "Express", icon: "devicon-express-original", category: "backend" },
+  { name: "Firebase", icon: "devicon-firebase-plain colored", category: "backend" },
+  { name: "MySQL", icon: "devicon-mysql-plain colored", category: "backend" },
+  { name: "Python", icon: "devicon-python-plain colored", category: "backend" },
+  { name: "C++", icon: "devicon-cplusplus-plain colored", category: "backend" },
+  { name: "C#", icon: "devicon-csharp-plain colored", category: "backend" },
+  { name: "OpenCV", icon: "devicon-opencv-plain colored", category: "backend" },
 
   // Tools
-  { name: "Git/GitHub", level: 85, category: "tools" },
-  { name: "Figma", level: 75, category: "tools" },
-  { name: "VS Code", level: 90, category: "tools" },
-  { name: "Arduino", level: 80, category: "tools" },
-  { name: "Anaconda", level: 70, category: "tools" },
+  { name: "Git/GitHub", icon: "devicon-git-plain colored", category: "tools" },
+  { name: "Figma", icon: "devicon-figma-plain colored", category: "tools" },
+  { name: "VS Code", icon: "devicon-vscode-plain colored", category: "tools" },
+  { name: "Arduino", icon: "devicon-arduino-plain colored", category: "tools" },
+  { name: "Anaconda", icon: "devicon-anaconda-original colored", category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -61,27 +63,16 @@ const Skills = () => {
         </div>
 
         <div className="grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map((skills, key) => (
+          {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-6 rounded-lg shadow-xs card-hover flex flex-col items-center justify-center text-center gap-3"
             >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skills.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skills.level + "%" }}
-                />
-              </div>
+              <i className={cn(skill.icon, "text-5xl")} />
 
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skills.level}%
-                </span>
+              <h3 className="font-semibold text-base">{skill.name}</h3>
+
               </div>
-            </div>
           ))}
         </div>
       </div>

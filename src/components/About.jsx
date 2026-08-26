@@ -13,26 +13,30 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 item-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
+              Software Engineer & Full-Stack Developer
             </h3>
 
             <p className="text-muted-foreground">
-              I take pride in transforming ideas into functional, user-focused
-              digital solutions. From crafting intuitive interfaces to
-              developing reliable backend systems, I’m driven by the goal of
-              creating applications that make a real impact. My background in
-              Computer Engineering has equipped me with both technical expertise
-              and hands-on leadership experience, enabling me to collaborate
-              effectively and deliver results in real-world projects.
+              I’m a Software Engineer and Full-Stack Developer focused on
+              building reliable, user-centered web applications and digital
+              solutions. With a background in Computer Engineering and
+              professional experience developing enterprise platforms, I work
+              across frontend and backend technologies including React,
+              JavaScript, Python, Django, Node.js, MySQL, and MongoDB. I enjoy
+              turning real-world requirements into practical software, from
+              responsive interfaces and data-driven dashboards to backend
+              systems and database integrations.
             </p>
 
             <p className="text-muted-foreground">
-              I’m deeply motivated by the process of learning and refining
-              whether it’s experimenting with new frameworks, improving code
-              efficiency, or understanding how design affects user behavior. I
-              see development as both a craft and a continuous journey one
-              that challenges me to think critically, stay adaptable, and build
-              with purpose.
+              I’ve worked on client-facing platforms, collaborated with
+              cross-functional teams, and supported testing, UAT, and production
+              delivery. I’m driven by continuous learning and improving the way
+              I build software—whether exploring new technologies, optimizing
+              existing solutions, or using AI-assisted development tools such as
+              Claude Code to improve my workflow. I’m always looking for better
+              ways to solve problems, write maintainable code, and create
+              technology that delivers meaningful value.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
