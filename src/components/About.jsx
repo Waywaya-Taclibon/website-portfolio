@@ -32,7 +32,7 @@ const About = () => {
               I’ve worked on client-facing platforms, collaborated with
               cross-functional teams, and supported testing, UAT, and production
               delivery. I’m driven by continuous learning and improving the way
-              I build software—whether exploring new technologies, optimizing
+              I build software, whether exploring new technologies, optimizing
               existing solutions, or using AI-assisted development tools such as
               Claude Code to improve my workflow. I’m always looking for better
               ways to solve problems, write maintainable code, and create
