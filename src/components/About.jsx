@@ -1,5 +1,5 @@
 import { UserStar, Code, Cog, CogIcon } from "lucide-react";
-import Resume from "../assets/Waywaya_Taclibon.pdf";
+import Resume from "../assets/Waywaya_Taclibon_Resume.pdf";
 import React from "react";
 
 const About = () => {
@@ -46,7 +46,7 @@ const About = () => {
               </a>
               <a
                 href={Resume}
-                download="Waywaya_Taclibon _Resume.pdf"
+                download="Waywaya_Taclibon_Resume.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
