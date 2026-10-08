@@ -181,12 +181,6 @@ const About = () => {
               ways to build.
             </p>
 
-            <p className="text-muted-foreground/80 text-sm md:text-base leading-relaxed">
-              I work across React, JavaScript, Python, Django, Node.js, MySQL,
-              and MongoDB — turning real-world requirements into maintainable,
-              production-ready software.
-            </p>
-
             <div className="rounded-2xl border border-border bg-card/60 backdrop-blur p-4 sm:p-5 text-left shadow-sm">
               <p className="text-sm font-semibold text-foreground mb-3">
                 Core Skills

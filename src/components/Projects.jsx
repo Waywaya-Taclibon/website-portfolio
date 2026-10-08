@@ -1,5 +1,5 @@
 import { motion as Motion } from "framer-motion";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Hammer } from "lucide-react";
 import { getTechIcon } from "../data/skills";
 import { cn } from "../lib/utils";
 
@@ -41,6 +41,18 @@ const projects = [
     demoUrl: "https://dopawink.vercel.app/",
     githubUrl: "https://github.com/Waywaya-Taclibon/dating-webapp",
   },
+
+  {
+    id: 3,
+    title: "Makatipid",
+    description:
+      "Rental management system that acts as a platform for user who are looking for rental properties and users that post rental properties.",
+    image: "",
+    tags: ["React", "Node.js", "Express", "MySQL"],
+    demoUrl: "",
+    githubUrl: "",
+    status: "in-progress",
+  },
 ];
 
 const Projects = () => {
@@ -66,46 +78,74 @@ const Projects = () => {
           Here are some of my featured projects. Each project was carefully
           crafted with attention to detail, performance, and user experience.
         </Motion.p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => {
+            const isInProgress = project.status === "in-progress";
+            return (
             <Motion.article
               key={project.id}
               variants={item}
-              className="group rounded-2xl border border-border bg-card/60 backdrop-blur overflow-hidden shadow-sm transition-all duration-300 hover:border-primary/40 hover:shadow-md hover:-translate-y-1"
+              className="group flex h-full flex-col rounded-2xl border border-border bg-card/60 backdrop-blur overflow-hidden shadow-sm transition-all duration-300 hover:border-primary/40 hover:shadow-md hover:-translate-y-1"
             >
               <div className="relative h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={`${project.title} preview`}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                ) : (
+                  <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-primary/15 via-secondary/40 to-transparent">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-dashed border-primary/40 bg-card/60">
+                      <Hammer className="h-6 w-6 text-primary" />
+                    </span>
+                    <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                      Preview coming soon
+                    </span>
+                  </div>
+                )}
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 />
-                <div className="absolute bottom-3 right-3 flex gap-2 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`View live demo of ${project.title}`}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card/90 backdrop-blur text-foreground transition-colors duration-300 hover:text-primary hover:border-primary/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`View source code of ${project.title} on GitHub`}
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card/90 backdrop-blur text-foreground transition-colors duration-300 hover:text-primary hover:border-primary/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                  >
-                    <Github className="h-4 w-4" />
-                  </a>
-                </div>
+                {isInProgress && (
+                  <span className="absolute top-3 left-3 inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-card/90 backdrop-blur px-3 py-1 text-xs font-medium text-amber-600 dark:text-amber-400">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-60" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500" />
+                    </span>
+                    In Development
+                  </span>
+                )}
+                {(project.demoUrl || project.githubUrl) && (
+                  <div className="absolute bottom-3 right-3 flex gap-2 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View live demo of ${project.title}`}
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card/90 backdrop-blur text-foreground transition-colors duration-300 hover:text-primary hover:border-primary/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View source code of ${project.title} on GitHub`}
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card/90 backdrop-blur text-foreground transition-colors duration-300 hover:text-primary hover:border-primary/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      >
+                        <Github className="h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
-              <div className="p-6">
+              <div className="flex flex-1 flex-col p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => {
                     const icon = getTechIcon(tag);
@@ -132,31 +172,45 @@ const Projects = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
-                <div className="flex items-center gap-4">
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`View live demo of ${project.title}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/80 transition-colors duration-300 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-sm"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`View source code of ${project.title} on GitHub`}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/80 transition-colors duration-300 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-sm"
-                  >
-                    <Github className="h-4 w-4" />
-                    Source Code
-                  </a>
+                <div className="mt-auto">
+                {(project.demoUrl || project.githubUrl) ? (
+                  <div className="flex items-center gap-4">
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View live demo of ${project.title}`}
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/80 transition-colors duration-300 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-sm"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Live Demo
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View source code of ${project.title} on GitHub`}
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/80 transition-colors duration-300 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-sm"
+                      >
+                        <Github className="h-4 w-4" />
+                        Source Code
+                      </a>
+                    )}
+                  </div>
+                ) : (
+                  <p className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                    <Hammer className="h-4 w-4 text-amber-500" />
+                    Demo and code links coming soon
+                  </p>
+                )}
                 </div>
               </div>
             </Motion.article>
-          ))}
+            );
+          })}
         </div>
         <Motion.div variants={item} className="text-center mt-12">
           <a
