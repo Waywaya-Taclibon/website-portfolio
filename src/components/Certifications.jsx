@@ -1,5 +1,21 @@
-import { ArrowRight, ExternalLink } from "lucide-react";
-import React from "react";
+import { motion as Motion } from "framer-motion";
+import { Award, CalendarDays, ExternalLink } from "lucide-react";
+
+const container = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 const certifications = [
   {
@@ -28,41 +44,63 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
+    <section id="certifications" className="py-24 px-4 sm:px-6 relative overflow-hidden">
+      <Motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+        className="container mx-auto max-w-5xl relative z-10"
+      >
         {/* Section Title */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          My <span className="text-primary">Certifications</span>
-        </h2>
+        <Motion.h2
+          variants={item}
+          className="text-3xl md:text-4xl font-extrabold tracking-tight text-balance text-center mb-4"
+        >
+          My <span className="text-gradient">Certifications</span>
+        </Motion.h2>
 
-        <p className="text-center text-muted-foreground-color mb-12 max-w-2xl mx-auto">
+        <Motion.p
+          variants={item}
+          className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-balance"
+        >
           A showcase of the certifications that reflect my continuous growth and
           pursuit of technical excellence.
-        </p>
+        </Motion.p>
 
         {/* Certifications Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {certifications.map((cert) => (
-            <div
+            <Motion.article
               key={cert.id}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover relative"
+              variants={item}
+              className="group rounded-2xl border border-border bg-card/60 backdrop-blur overflow-hidden shadow-sm transition-all duration-300 hover:border-primary/40 hover:shadow-md hover:-translate-y-1"
             >
-              {/* Image */}
-              <div className="h-48 overflow-hidden">
+              {/* Image — aspect ratio matches the original 3-column h-48 crop (~14/9), so the tailored certificate previews look exactly as before, just larger */}
+              <div className="relative aspect-[14/9] overflow-hidden">
                 <img
                   src={cert.image}
-                  alt={cert.title}
+                  alt={`${cert.title} certificate preview`}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                />
+                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full border border-border bg-card/90 backdrop-blur px-3 py-1 text-xs font-medium text-muted-foreground">
+                  <Award className="h-3.5 w-3.5 text-primary" />
+                  {cert.issuer}
+                </span>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1">{cert.title}</h3>
-                <p className="text-muted-foreground text-sm mb-2">
-                  Issued by <span className="font-medium">{cert.issuer}</span>
-                </p>
-                <p className="text-muted-foreground text-xs mb-4">
+                <h3 className="text-xl font-semibold tracking-tight text-foreground text-balance mb-2">
+                  {cert.title}
+                </h3>
+                <p className="flex items-center gap-1.5 text-muted-foreground text-xs mb-4">
+                  <CalendarDays className="h-3.5 w-3.5 text-primary" />
                   {cert.date}
                 </p>
 
@@ -71,28 +109,32 @@ const Certifications = () => {
                   <a
                     href={cert.verifyUrl}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-foreground/80 hover:text-primary transition-colors duration-300 flex items-center gap-2"
+                    rel="noreferrer"
+                    aria-label={`View certificate document for ${cert.title}`}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/80 transition-colors duration-300 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-sm"
                   >
-                    View Certificate <ExternalLink size={16} />
+                    View Certificate <ExternalLink className="h-4 w-4" />
                   </a>
 
-                  <span className="text-muted-foreground">|</span>
+                  <span aria-hidden="true" className="text-muted-foreground">
+                    |
+                  </span>
 
                   <a
                     href={cert.badgeUrl}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-foreground/80 hover:text-primary transition-colors duration-300 flex items-center gap-2"
+                    rel="noreferrer"
+                    aria-label={`View verifiable badge for ${cert.title}`}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/80 transition-colors duration-300 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary rounded-sm"
                   >
-                    View Badge <ExternalLink size={16} />
+                    View Badge <ExternalLink className="h-4 w-4" />
                   </a>
                 </div>
               </div>
-            </div>
+            </Motion.article>
           ))}
         </div>
-      </div>
+      </Motion.div>
     </section>
   );
 };
