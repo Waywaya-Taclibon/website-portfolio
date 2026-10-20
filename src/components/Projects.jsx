@@ -47,11 +47,10 @@ const projects = [
     title: "Makatipid",
     description:
       "Rental management system that acts as a platform for user who are looking for rental properties and users that post rental properties.",
-    image: "",
+    image: "/Projectimg/Makatipid.png",
     tags: ["React", "Node.js", "Express", "MySQL"],
-    demoUrl: "",
-    githubUrl: "",
-    status: "in-progress",
+    demoUrl: "https://makatipid-website.vercel.app/",
+    githubUrl: "https://github.com/Waywaya-Taclibon/makatipid-website",
   },
 ];
 
